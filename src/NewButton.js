@@ -1,14 +1,7 @@
-import { useState } from "react";
-
-export function NewButton() {
-    let [count, setcount] = useState(0);
+export default function NewButton({ onClick, color }) {
     return (
         <>
-            <button onClick={() => setcount(count + 1)}>this is new button's count:{count}</button>
-
+            <button style={{ backgroundColor: color }} onClick={onClick}>Click me</button>
         </>
     )
 }
-
-
-export let car = 'santro';

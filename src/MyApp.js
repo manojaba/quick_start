@@ -1,26 +1,19 @@
-import { car, NewButton } from "./NewButton"
+import { useState } from "react";
+import NewButton from "./NewButton";
 
+export default function MyApp() {
 
-function Button() {
+    let [color, setColor] = useState('yellow')
+    let [data, setdata] = useState('green')
+
+    let handleClick = () => setColor('pink');
+
+    let newColor = () => setdata('red');
     return (
         <>
-            <button>this is a button</button>
+            <h1>MyApp</h1>
+            <NewButton onClick={handleClick} color={color} />
+            <NewButton onClick={newColor} color={data}></NewButton>
         </>
     )
 }
-
-function MyApp() {
-    return (
-        <>
-            <h1>this is my app  component</h1>
-            <Button />
-            <NewButton />
-            <p>this is car: {car}</p>
-
-
-
-        </>
-    )
-}
-
-export default MyApp
