@@ -1,3 +1,6 @@
+import { car, NewButton } from "./NewButton"
+
+
 function Button() {
     return (
         <>
@@ -11,6 +14,11 @@ function MyApp() {
         <>
             <h1>this is my app  component</h1>
             <Button />
+            <NewButton />
+            <p>this is car: {car}</p>
+
+
+
         </>
     )
 }
